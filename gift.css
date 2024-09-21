@@ -1,12 +1,12 @@
-.v2 #contents.contact-form-page {
-    margin-bottom: 28px
+<style>.v2 #contents.contact-form-page {
+    margin-bottom: 28px;
 }
 
 @charset "UTF-8";
 
 .noDisplay,
 legend {
-    display: none
+    display: none;
 }
 
 .jx-floating-menu__cart-box-width {
@@ -23735,3 +23735,5 @@ body#pageShoppingGift .v2 #contents {
     width: 600px;
     height: 1800px
 }
+
+</style>
