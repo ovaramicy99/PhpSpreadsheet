@@ -9,14 +9,14 @@
  }
 
  /* Style the iframe title (optional) */
- iframe[title="Owncast"] {
+ iframe[title="Rise138Livestream"] {
    font-size: 18px; /* Adjust the title font size */
    font-weight: bold; /* Make the title bold */
    padding: 10px; /* Add some padding around the title */
  }
 
  /* Style the iframe content (optional) */
- iframe[title="Owncast"] body {
+ iframe[title="Rise138Livestream"] body {
    margin: 0; /* Reset margin inside the iframe */
    padding: 10px; /* Add padding inside the iframe content */
  }
