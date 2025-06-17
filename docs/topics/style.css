@@ -531,7 +531,7 @@ ul li.active a {
   cursor: pointer;
 }
 
-/* Responsive .tbl-container fix */
+/* History Table Base Styles (Shared) */
 .tbl-container {
   background-color: rgba(26, 26, 26, 0.5);
   border: 2px solid #ffffff;
@@ -541,40 +541,17 @@ ul li.active a {
   padding: 15px 15px 5px;
   user-select: none;
   width: 100%;
+  max-width: 100%;
   margin: 0 auto 5px;
-  overflow-x: hidden;
-  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tbl-container table {
-  table-layout: fixed;
+  table-layout: auto;
   width: 100%;
   border-collapse: collapse;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.tbl-container th,
-.tbl-container td {
-  word-break: break-word;
-  overflow-wrap: anywhere;
-  white-space: normal;
-  text-align: center;
-}
-
-/* Default: Assign equal width to columns */
-.tbl-container th,
-.tbl-container td {
-  width: 33.33%;
-}
-
-/* Adjustments for medium screens */
-@media screen and (max-width: 1024px) {
-  .tbl-container th,
-  .tbl-container td {
-    width: 33.33%;
-    font-size: 15px;
-  }
+  min-width: 500px;
 }
 
 /* Adjustments for smaller screens */
@@ -583,11 +560,10 @@ ul li.active a {
     padding: 10px;
   }
 
-  .tbl-container th,
-  .tbl-container td {
-    font-size: 13px !important;
+  .tbl-header th,
+  .tbl-content td {
+    font-size: 14px !important;
     padding: 4px;
-    width: auto;
   }
 
   .main-history-result-spaceman {
@@ -596,15 +572,23 @@ ul li.active a {
   }
 }
 
-/* Extra small screen fallback */
-@media screen and (max-width: 480px) {
-  .tbl-container th,
-  .tbl-container td {
-    font-size: 12px;
-    padding: 2px;
-  }
+.tbl-header {
+  padding-top: 0px;
+  border-bottom: solid 2px rgba(255, 255, 255);
 }
 
+.tbl-content {
+  position: relative;
+  margin-top: 10px;
+}
+
+td {
+  padding: 5px;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+}
 
 .blurred {
   filter: blur(3px);
