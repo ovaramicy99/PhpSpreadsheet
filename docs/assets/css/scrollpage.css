@@ -1,0 +1,47 @@
+.scrollpage {
+  position: relative;
+  box-sizing: border-box;
+  height: 300px;
+  margin: 0px auto 20px;
+  text-align: center;
+  pointer-events: none;
+  transform: none;
+  display: block;
+  contain: layout;
+  width: 100%;
+  clear: both;
+  background-color: rgb(247, 247, 247)
+}
+.ads-scrollpage-container {
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.ads-scrollpage-height {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  contain: none;
+  pointer-events: auto;
+  width: 100%;
+  height: 250px;
+}
+.ads-scrollpage-top {
+  position: sticky;
+  contain: none;
+  top: 88px;
+  will-change: transform;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.ads-scrollpage-banner {
+  width: 100%;
+  height: 100%;
+};
+.ads-scrollpage-box{
+  height: 280px;
+};
