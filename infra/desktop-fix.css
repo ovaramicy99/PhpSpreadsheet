@@ -1,0 +1,111 @@
+/**
+ * desktop-fix.css
+ * Fix centering issue on desktop (≥1200px)
+ * Tambahkan di header.php:
+ *   <link href="css/desktop-fix.css" rel="stylesheet"/>
+ *
+ * ATAU untuk site yang sudah live, inject via:
+ *   <link href="https://lp.oceanaspaces.com/css/desktop-fix.css" rel="stylesheet"/>
+ */
+
+@media (min-width: 1200px) {
+
+  /* ── Body background ── */
+  body {
+    background-color: black !important;
+  }
+
+  /* ── Content box: center horizontally ── */
+  div#content {
+    max-width: 1170px !important;
+    width: 1170px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background: #00000073 !important;
+    box-shadow: 0 32px 62px 28px rgb(0 0 0 / 100%);
+    border-left: 3px solid #ffed00 !important;
+    border-right: 3px solid #ffed00 !important;
+    position: relative;
+  }
+
+  /* ── Container inside content ── */
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── Fixed top navbar wrapper (full width) ── */
+  #navbar-top-wrapper {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  /* ── Top navbar inner: centered 1170px box ── */
+  #navbar-top {
+    max-width: 1170px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-left: 3px solid #ffed00 !important;
+    border-right: 3px solid #ffed00 !important;
+  }
+
+  /* ── Category menubars ── */
+  .menubar:not(.fixed-bottom) {
+    max-width: 1170px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ── Fixed bottom navbar ── */
+  nav.navbar.fixed-bottom {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: transparent !important;
+    border-top: none !important;
+  }
+
+  /* Pseudo-element creates the visible centered bar */
+  nav.navbar.fixed-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1170px;
+    height: 100%;
+    background: linear-gradient(to top, #000000 3%, #582000 1%, #8d6500 50%, #fbff00 50%, #ffca00 85%, #523b00 97%, #fedd00 3%);
+    border-top: 3px solid #ffff00;
+    border-radius: 25px 25px 0 0;
+    z-index: 0;
+  }
+
+  nav.navbar.fixed-bottom .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Sidebar: anchored relative to content box when open ── */
+  #sidebar {
+    left: calc(50% - 585px - 280px) !important; /* hidden: off-screen left */
+  }
+  #sidebar.active {
+    left: calc(50% - 585px) !important; /* visible: aligned to content box */
+  }
+
+  /* ── Floating left buttons: anchored to left edge of content box ── */
+  div[style*="position: fixed"][style*="left: 5px"] {
+    left: calc(50% - 580px) !important;
+  }
+
+  /* ── Floating right menu (fl_menu, slide-left) ── */
+  #fl_menu {
+    right: calc(50% - 585px) !important;
+  }
+  #slide-left {
+    left: calc(50% - 585px) !important;
+  }
+}

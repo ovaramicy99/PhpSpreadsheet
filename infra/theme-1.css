@@ -1,0 +1,115 @@
+/**
+ * theme-yellow.css
+ * Dollar4D Color Theme: YELLOW
+ *
+ * Cara pakai: di header.php, ganti:
+ *   <link href="...css/theme-yellow.css" rel="stylesheet"/>
+ * dengan:
+ *   <link href="...css/theme-yellow.css" rel="stylesheet"/>
+ */
+
+/* ── Category menubar (top) ── */
+.menubar:not(.fixed-bottom) {
+  background: linear-gradient(#fff700, #ffff00, #ffca00) !important;
+  border-bottom: 2px solid #ffff00 !important;
+}
+
+/* Full menubar gradient (detailed) */
+.menubar {
+  background-image: linear-gradient(to top, #000000 3%, #582000 1%, #8d6500 50%, #fbff00 50%, #ffca00 85%, #523b00 97%, #fedd00 3%) !important;
+  border-bottom: 2px solid #ffff00;
+}
+
+/* Fixed bottom menubar */
+.menubar.navbar.fixed-bottom.navbar-dark.bg-dark.p-0 {
+  border-top: 3px solid #ffff00 !important;
+}
+
+/* ── Bottom navbar pseudo (desktop) ── */
+nav.navbar.fixed-bottom::before {
+  background: linear-gradient(to top, #000000 3%, #582000 1%, #8d6500 50%, #fbff00 50%, #ffca00 85%, #523b00 97%, #fedd00 3%) !important;
+  border-top: 3px solid #ffff00 !important;
+}
+
+/* ── btn-dollar4d (CTA buttons) ── */
+.btn-dollar4d {
+  box-shadow: inset 0 0 0 1px #9d871b, inset 0 2px 0 0 #dfcf3c, inset 0 4px 4px 2px #FFEB3B, 3px 3px 3px 1px rgba(0,0,0,0.2);
+  background-image: linear-gradient(to bottom, #ff9200 0%, #FFEB3B 50%, #ef9200 100%);
+  border: 1px solid #fffa00 !important;
+  color: #000000 !important;
+}
+.btn-dollar4d:hover {
+  background-image: linear-gradient(to bottom, #FFEB3B 0%, #ff9200 50%, #ef9200 100%);
+}
+
+/* ── nav-tabs ── */
+.nav-tabs {
+  background: #fff000 !important;
+}
+
+/* ── form-control border ── */
+.form-control {
+  border-color: #ffd700 !important;
+}
+.form-control:focus {
+  border-color: #ffff00 !important;
+  box-shadow: 0 0 0 0.2rem #ffff0040 !important;
+}
+
+/* ── show-more button ── */
+.show-more-btn {
+  background: linear-gradient(to bottom, #ffe400, #ffd700) !important;
+}
+
+/* ── Desktop content box borders ── */
+@media (min-width: 1200px) {
+  div#content {
+    border-left-color: #ffed00 !important;
+    border-right-color: #ffed00 !important;
+  }
+  #navbar-top {
+    border-left-color: #ffed00 !important;
+    border-right-color: #ffed00 !important;
+  }
+  nav.navbar.fixed-bottom::before {
+    border-top-color: #ffff00 !important;
+  }
+}
+
+/* ── Misc accents ── */
+.border-primary {
+  border-color: #ffff00 !important;
+}
+.text-decoration-none {
+  color: #ffca00 !important;
+}
+.btn-outline-primary {
+  --bs-btn-border-color: #ffff00;
+  --bs-btn-hover-bg: #ffca00;
+  background: #ffca00;
+  color: #000 !important;
+}
+
+/* ── Menu text ── */
+
+/* Bottom navbar - hitam */
+nav.navbar.fixed-bottom a.text-decoration-none,
+nav.navbar.fixed-bottom a.text-decoration-none div,
+nav.navbar.fixed-bottom a.text-white,
+nav.navbar.fixed-bottom .d-flex a {
+  color: #000000 !important;
+}
+
+/* Sidebar menu links - tetap putih (bg gelap) */
+#sidebar a.nav-link,
+#sidebar a.nav-link i {
+  color: #ffffff !important;
+}
+
+/* ── Menubar category (HOME SLOT CASINO dll) - hitam ── */
+nav.menubar a.text-decoration-none,
+nav.menubar a.text-decoration-none *,
+nav.menubar a.text-white,
+nav.menubar a.text-white * {
+  color: #000000 !important;
+}
