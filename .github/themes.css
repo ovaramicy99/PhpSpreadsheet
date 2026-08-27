@@ -1,0 +1,56 @@
+/* =========================================================
+   NEXORA — Color Themes
+   -----------------------------------------------------------
+   Default (no attribute) = violet/cyan.
+   To switch the whole site to one accent color, set the
+   data-theme attribute on the <html> tag, e.g.:
+
+     <html lang="en" data-theme="yellow">
+
+   Options: yellow | red | blue | green | purple | orange
+   Or use the color-dot switcher in the nav bar (top right) —
+   it sets this same attribute for you and remembers your
+   choice on this device.
+   ========================================================= */
+
+[data-theme="yellow"]{
+  --violet:     #F2C94C;
+  --violet-dim: #C79A2E;
+  --cyan:       #FFD873;
+  --pink:       #FFB238;
+}
+
+[data-theme="red"]{
+  --violet:     #FF5C5C;
+  --violet-dim: #B33A3A;
+  --cyan:       #FF9B9B;
+  --pink:       #FF2D55;
+}
+
+[data-theme="blue"]{
+  --violet:     #4C8DFF;
+  --violet-dim: #34579E;
+  --cyan:       #8CC0FF;
+  --pink:       #2F6FE0;
+}
+
+[data-theme="green"]{
+  --violet:     #3ECF8E;
+  --violet-dim: #2A8F63;
+  --cyan:       #8CF2C4;
+  --pink:       #1FAE6E;
+}
+
+[data-theme="purple"]{
+  --violet:     #9B5CFF;
+  --violet-dim: #6B3FB3;
+  --cyan:       #C9A8FF;
+  --pink:       #7C3FE0;
+}
+
+[data-theme="orange"]{
+  --violet:     #FF8A3D;
+  --violet-dim: #C46A2E;
+  --cyan:       #FFC08A;
+  --pink:       #E8641A;
+}
